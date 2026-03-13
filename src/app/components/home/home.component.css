@@ -1,0 +1,11 @@
+.hero-section {
+  background: linear-gradient(to right, #292A2D);
+  color: white;
+   text-align: center;
+    padding: 80px 20px;
+  border-radius: 8px;
+}
+
+.hero-buttons button {
+  min-width: 140px;
+}

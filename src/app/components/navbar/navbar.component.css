@@ -1,0 +1,25 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.nav-links a {
+  margin-left: 10px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+}
+.spacer { flex: 1 1 auto; }
+a { color: white; text-decoration: none; }
