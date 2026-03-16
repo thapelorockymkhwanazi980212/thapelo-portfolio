@@ -1,10 +1,28 @@
-<!-- Hero Section -->
-<section class="hero-section" fxLayout="column" fxLayoutAlign="center center" style="text-align:center; padding: 80px 20px;">
-  <h1 style="font-size: 3rem; margin-bottom: 16px;">Hi, I'm Thapelo</h1>
-  <p style="font-size: 1.2rem; margin-bottom: 32px;">I build web applications and help businesses grow online.</p>
+<section class="hero-section">
 
-  <div class="hero-buttons" style="display:flex; gap:16px; justify-content:center;">
-    <button mat-raised-button color="primary" style="background-color:#212C54" routerLink="/resume">View Resume</button>
-    <button mat-raised-button color="accent" routerLink="/contact">Need a Project?</button>
+  <div class="hero-content">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-text">
+      <h1>Hi, I'm Thapelo</h1>
+      <p>I build web applications and help businesses grow online.</p>
+
+      <div class="hero-buttons">
+        <button mat-raised-button style="background-color:#212C54" routerLink="/resume">
+          View Resume
+        </button>
+
+        <button mat-raised-button color="accent" routerLink="/contact">
+          Need a Project?
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-image">
+      <img src="assets/thapelo.jpg" alt="Thapelo">
+    </div>
+
   </div>
+
 </section>

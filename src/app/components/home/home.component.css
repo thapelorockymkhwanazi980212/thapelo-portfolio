@@ -1,11 +1,26 @@
 .hero-section {
   background: linear-gradient(to right, #292A2D);
   color: white;
-   text-align: center;
-    padding: 80px 20px;
-  border-radius: 8px;
+  padding: 80px 40px;
 }
 
-.hero-buttons button {
-  min-width: 140px;
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 10px;
 }
