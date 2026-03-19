@@ -1,4 +1,5 @@
-<section class="hero-section">
+<!-- HOME/HERO SECTION -->
+<section id="home" class="hero-section">
 
   <!-- Left vertical text -->
   <div class="vertical-text-col">
@@ -9,22 +10,15 @@
 
   <!-- Hero content -->
   <div class="hero-content">
-
-    <!-- Name -->
     <div class="hero-name">
-      <span class="first-name">Hello I'm Thapelo</span>
+      <span class="first-name">Hello, I'm Thapelo</span>
     </div>
-
-    <!-- Short Bio -->
     <p class="hero-bio">
-      I aim to build user-friendly web applications and websites that help developing businesses
-      grow and showcase their value.
+      I aim to build real-world web applications and websites that help developing
+      businesses grow and showcase their value.
     </p>
 
-    <!-- Stats and Services side by side -->
     <div class="hero-bottom">
-
-      <!-- Left - Services -->
       <div class="services-list">
         <h4 class="services-title">What I Do</h4>
         <div class="service-item">
@@ -33,7 +27,7 @@
         </div>
         <div class="service-item">
           <span class="service-arrow">▸</span>
-          <span class="service-text">Fullstack Development</span>
+          <span class="service-text">Full Stack Development</span>
         </div>
         <div class="service-item">
           <span class="service-arrow">▸</span>
@@ -41,7 +35,7 @@
         </div>
         <div class="service-item">
           <span class="service-arrow">▸</span>
-          <span class="service-text">Rest API Integration</span>
+          <span class="service-text">REST API Integration</span>
         </div>
         <div class="service-item">
           <span class="service-arrow">▸</span>
@@ -52,44 +46,48 @@
           <span class="service-text">Responsive Web Design</span>
         </div>
       </div>
-
-      <!-- Thin Divider -->
       <div class="bottom-divider"></div>
-
-      <!-- Right - Stats -->
       <div class="stats-col">
         <div class="stat-item">
           <span class="stat-number">2+</span>
-          <span class="stat-label">Experience</span>
+          <span class="stat-label">Years Learning</span>
         </div>
         <div class="stat-item">
           <span class="stat-number">5+</span>
           <span class="stat-label">Projects Built</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">10+</span>
+          <span class="stat-number">8+</span>
           <span class="stat-label">Technologies</span>
         </div>
       </div>
-
     </div>
 
-    <!-- Button -->
-    <button mat-stroked-button class="portfolio-btn" onclick="window.open('https://github.com/thapelorockymkhwanazi980212', '_blank')">
+    <button mat-stroked-button class="portfolio-btn"
+            onclick="window.open('https://github.com/thapelorockymkhwanazi980212', '_blank')">
       My Projects
     </button>
-
   </div>
 
   <!-- Right profile card -->
   <div class="profile-card">
     <img src="assets/thapelo.jpg" alt="Thapelo" class="profile-img" />
     <div class="card-overlay">
-<!--      <p class="quote">"I build clean, scalable web applications."</p>-->
+      <p class="quote">"I build clean, scalable web applications."</p>
     </div>
   </div>
 
 </section>
 
-<app-about></app-about>
-<app-contact></app-contact>
+<!-- ABOUT SECTION -->
+<section id="about">
+  <app-about></app-about>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <app-contact></app-contact>
+</section>
+
+<!-- FOOTER -->
+<app-footer></app-footer>

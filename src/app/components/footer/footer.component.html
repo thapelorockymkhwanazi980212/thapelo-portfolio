@@ -16,7 +16,7 @@
     <div class="footer-nav">
       <h4>Quick Links</h4>
       @for (link of navLinks; track link.label) {
-      <a [routerLink]="link.path" mat-button class="footer-link">
+      <a mat-button class="footer-link" (click)="scrollTo(link.section)">
         {{ link.label }}
       </a>
       }

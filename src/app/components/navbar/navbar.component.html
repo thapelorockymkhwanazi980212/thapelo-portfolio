@@ -1,12 +1,9 @@
-<!-- Main Navbar -->
 <mat-toolbar class="navbar">
 
-  <!-- Hamburger button - only visible on mobile/tablet -->
   <button mat-icon-button class="hamburger-btn" (click)="toggleMenu()">
     <mat-icon>{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
   </button>
 
-  <!-- Logo -->
   <div class="logo">
     <span class="logo-icon">T</span>
     <span class="logo-text">Thapelo <br> Mkhwanazi</span>
@@ -14,34 +11,35 @@
 
   <span class="spacer"></span>
 
-  <!-- Nav Links - hidden on mobile/tablet -->
+  <!-- Nav Links with active highlight -->
   <div class="nav-links">
     @for (link of navLinks; track link.label) {
-    <a mat-button [routerLink]="link.path">{{ link.label }}</a>
+    <a mat-button
+       (click)="scrollTo(link.section)"
+       [class.active-link]="activeSection === link.section">
+      {{ link.label }}
+    </a>
     }
   </div>
 
-  <!-- CTA Button -->
-  <button mat-stroked-button class="talk-btn" onclick="window.open('https://github.com/thapelorockymkhwanazi980212', '_blank')">
+  <button mat-stroked-button class="talk-btn"
+          onclick="window.open('https://github.com/thapelorockymkhwanazi980212', '_blank')">
     Projects
   </button>
 
 </mat-toolbar>
-<!--  mat-toolbar closes HERE -->
 
-<!-- Mobile Dropdown Menu - OUTSIDE toolbar -->
+<!-- Mobile Dropdown Menu -->
 <div class="mobile-menu" [class.open]="menuOpen">
   @for (link of navLinks; track link.label) {
-  <a [routerLink]="link.path" class="mobile-link" (click)="closeMenu()">
+  <a class="mobile-link"
+     (click)="scrollTo(link.section)"
+     [class.active-mobile-link]="activeSection === link.section">
     {{ link.label }}
   </a>
   }
-  <a routerLink="/contact" class="mobile-link mobile-cta" (click)="closeMenu()">
-    Projects
-  </a>
 </div>
 
-<!-- Overlay - OUTSIDE toolbar -->
 @if (menuOpen) {
 <div class="overlay" (click)="closeMenu()"></div>
 }

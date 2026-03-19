@@ -2,11 +2,12 @@
   display: flex;
   background-color: #1a1a1a;
   color: white;
-  padding: 60px 40px;
-  gap: 40px;
+  padding: 60px 40px 20px 40px;
+  gap: 10px;
   font-family: 'Segoe UI', sans-serif;
-  min-height: 100vh;
+
   box-sizing: border-box;
+
 }
 
 /* ---- LEFT COLUMN ---- */
@@ -69,7 +70,8 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-size: 14px;
+  font-size: 17px;
+  margin-left: 150px;
 }
 
 .middle-col h3 {
@@ -201,7 +203,7 @@ mat-divider {
   width: 100%;
 }
 
-/* Make Material form fields match dark theme */
+/*  Material form fields match dark theme */
 .mat-mdc-form-field {
   --mdc-outlined-text-field-outline-color: #555555;
   --mdc-outlined-text-field-hover-outline-color: #ffffff;

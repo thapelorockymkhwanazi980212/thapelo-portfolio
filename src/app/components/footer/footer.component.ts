@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [MatButtonModule, RouterLink],
+  imports: [MatButtonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
@@ -14,10 +13,16 @@ export class FooterComponent {
   currentYear = new Date().getFullYear();
 
   navLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'Home', section: 'home' },
+    { label: 'About', section: 'about' },
+    { label: 'Contact', section: 'contact' },
   ];
+
+  scrollTo(section: string) {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 }
