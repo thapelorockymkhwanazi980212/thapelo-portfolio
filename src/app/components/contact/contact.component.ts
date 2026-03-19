@@ -33,7 +33,7 @@ export class ContactComponent {
 
   socialLinks = [
       { label: 'Facebook', icon: 'assets/icons/facebook.svg', url: '#' },
-      { label: 'Instagram',icon: 'assets/icons/angular.svg', url: '#' },
+      { label: 'Instagram',icon: 'assets/icons/instagram.svg', url: '#' },
       { label: 'GitHub', icon: 'assets/icons/github.svg', url: '#' },
       { label: 'LinkedIn', icon: 'assets/icons/linkedin.svg', url: '#' },
     ];

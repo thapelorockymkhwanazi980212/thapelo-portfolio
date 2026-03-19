@@ -235,3 +235,66 @@ mat-divider {
   font-size: 13px;
   margin: 0;
 }
+
+/* ==============================
+   RESPONSIVE STYLES
+============================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;  /* stack all columns vertically */
+    padding: 40px 24px 20px 24px;
+    gap: 30px;
+  }
+
+  .middle-col {
+    margin-left: 0;  /* remove the 150px margin! */
+    font-size: 14px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(4, 1fr);  /* 4 icons in a row on tablet */
+    gap: 12px;
+  }
+
+  .form-row {
+    flex-direction: column;  /* stack name/surname and email/phone vertically */
+    gap: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 16px 20px 16px;
+    gap: 24px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .middle-col {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);  /* 2 icons per row on mobile */
+    gap: 12px;
+  }
+
+  .social-card {
+    height: 80px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+}
