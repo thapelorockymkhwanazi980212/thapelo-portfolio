@@ -223,3 +223,15 @@ mat-divider {
   background-color: white !important;
   color: #1a1a1a !important;
 }
+
+.success-msg {
+  color: #4caf50;
+  font-size: 13px;
+  margin: 0;
+}
+
+.error-msg {
+  color: #f44336;
+  font-size: 13px;
+  margin: 0;
+}

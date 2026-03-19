@@ -47,9 +47,19 @@
         <textarea matInput [(ngModel)]="enquiry.message" placeholder="Write your message here..." rows="4"></textarea>
       </mat-form-field>
 
+    <!--  Success Message-->
+      @if(successMessage){
+        <p class="success-msg">{{ successMessage }}</p>
+      }
+
+      <!-- Error Message -->
+      @if (errorMessage) {
+      <p class="error-msg"> {{ errorMessage }}</p>
+      }
+
       <!-- Submit button -->
-      <button mat-stroked-button class="submit-btn" (click)="submitEnquiry()">
-        Send Enquiry
+      <button mat-stroked-button class="submit-btn" (click)="submitEnquiry()" [disabled]="isLoading">
+        {{ isLoading ? 'Sending...' : 'Send Enquiry' }}
       </button>
 
     </div>
