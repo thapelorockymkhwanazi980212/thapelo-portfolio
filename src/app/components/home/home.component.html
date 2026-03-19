@@ -7,45 +7,89 @@
     <span class="vertical-developer">FULL-STACK</span>
   </div>
 
-  <!-- Left content (MOVED HERE) -->
+  <!-- Hero content -->
   <div class="hero-content">
+
+    <!-- Name -->
     <div class="hero-name">
-      <span class="first-name">Mkhwanazi</span>
-      <span class="last-name">Thapelo</span>
+      <span class="first-name">Hello I'm Thapelo</span>
     </div>
+
+    <!-- Short Bio -->
     <p class="hero-bio">
-      My goal is to write clean, maintainable code that enhances
-      the development process and makes coding enjoyable through
-      structured and thoughtful practices.
+      I aim to build user-friendly web applications and websites that help developing businesses
+      grow and showcase their value.
     </p>
-    <button mat-stroked-button class="portfolio-btn">Portfolio</button>
+
+    <!-- Stats and Services side by side -->
+    <div class="hero-bottom">
+
+      <!-- Left - Services -->
+      <div class="services-list">
+        <h4 class="services-title">What I Do</h4>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Web Development</span>
+        </div>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Fullstack Development</span>
+        </div>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Database Design</span>
+        </div>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Rest API Integration</span>
+        </div>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Cloud and DevOps Fundamentals</span>
+        </div>
+        <div class="service-item">
+          <span class="service-arrow">▸</span>
+          <span class="service-text">Responsive Web Design</span>
+        </div>
+      </div>
+
+      <!-- Thin Divider -->
+      <div class="bottom-divider"></div>
+
+      <!-- Right - Stats -->
+      <div class="stats-col">
+        <div class="stat-item">
+          <span class="stat-number">2+</span>
+          <span class="stat-label">Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <button mat-stroked-button class="portfolio-btn" onclick="window.open('https://github.com/thapelorockymkhwanazi980212', '_blank')">
+      My Projects
+    </button>
+
   </div>
 
-  <!-- Right profile card (MOVED HERE) -->
+  <!-- Right profile card -->
   <div class="profile-card">
     <img src="assets/thapelo.jpg" alt="Thapelo" class="profile-img" />
     <div class="card-overlay">
-      <p class="quote">"I build clean, scalable web applications."</p>
+<!--      <p class="quote">"I build clean, scalable web applications."</p>-->
     </div>
   </div>
 
-<!--  &lt;!&ndash; Far right social icons &ndash;&gt;-->
-<!--  <div class="social-icons">-->
-<!--    <a href="#" mat-icon-button>-->
-<!--      <mat-icon svgIcon="github" class="social-icon"></mat-icon>-->
-<!--    </a>-->
-<!--    <a href="https://linkedin.com" mat-icon-button>-->
-<!--      <mat-icon>linked_in</mat-icon>-->
-<!--    </a>-->
-<!--    <a href="#" mat-icon-button>-->
-<!--      <mat-icon>dribbble</mat-icon>-->
-<!--    </a>-->
-<!--    <a href="#" mat-icon-button>-->
-<!--      <mat-icon>behance</mat-icon>-->
-<!--    </a>-->
-<!--  </div>-->
-
 </section>
+
 <app-about></app-about>
 <app-contact></app-contact>
-

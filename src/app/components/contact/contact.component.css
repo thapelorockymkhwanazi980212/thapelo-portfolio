@@ -143,8 +143,8 @@ mat-divider {
 .social-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 8px;
+  gap: 25px;
+  margin-top: 10px;
 }
 
 .social-card {
@@ -159,7 +159,7 @@ mat-divider {
   gap: 8px;
   text-decoration: none;
   transition: border-color 0.2s;
-  height: 80px;
+  height: 100px;
   width: 100%;
 }
 

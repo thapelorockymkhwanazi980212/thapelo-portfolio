@@ -1,12 +1,14 @@
+/* ---- HERO SECTION ---- */
 .hero-section {
   display: flex;
   align-items: flex-start;
   background-color: #1a1a1a;
   color: white;
   padding: 10px 40px 40px 40px;
-  gap: 350px;
+  gap: 200px;
   position: relative;
   overflow: hidden;
+  padding-left: 60px;
 }
 
 /* ---- VERTICAL TEXT ---- */
@@ -16,12 +18,14 @@
   align-items: center;
   gap: 12px;
   min-width: 40px;
+  max-width: 40px;
+  overflow: hidden;
 }
 
 .vertical-full-stack {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 13px;
+  font-size: 25px;
   color: #aaaaaa;
   letter-spacing: 2px;
 }
@@ -29,17 +33,156 @@
 .vertical-developer {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: 6px;
+  font-size: 33px;
+  font-weight: 800;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: white;
 }
 
 .vertical-line {
-  width: 1px;
-  height: 60px;
+  width: 5px;
+  height: 40px;
   background-color: #555555;
+}
+
+/* ---- HERO CONTENT ---- */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* ---- NAME ---- */
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.first-name {
+  font-size: 15px;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: #cccccc;
+}
+
+.last-name {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: white;
+}
+
+/* ---- BIO ---- */
+.hero-bio {
+  font-size: 14px;
+  color: #aaaaaa;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* ---- BOTTOM ROW - Stats and Services ---- */
+.hero-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 480px;
+}
+
+/* ---- SERVICES ---- */
+.services-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 16px;
+}
+
+.services-title {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin: 0 0 8px 0;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.service-arrow {
+  color: white;
+  font-size: 11px;
+}
+
+.service-text {
+  font-size: 12px;
+  color: #cccccc;
+  transition: color 0.2s;
+}
+
+.service-item:hover .service-text {
+  color: white;
+}
+
+/* ---- THIN DIVIDER ---- */
+.bottom-divider {
+  width: 1px;
+  background-color: #333333;
+  align-self: stretch;
+}
+
+/* ---- STATS ---- */
+.stats-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: #aaaaaa;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ---- BUTTON ---- */
+.portfolio-btn {
+  width: fit-content;
+  color: white !important;
+  border-color: white !important;
+  padding: 6px 24px;
+}
+
+.portfolio-btn:hover {
+  background-color: white !important;
+  color: #1a1a1a !important;
 }
 
 /* ---- PROFILE CARD ---- */
@@ -50,6 +193,8 @@
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid #333333;
+  margin-right: 40px;
+
 }
 
 .profile-img {
@@ -77,73 +222,6 @@
   margin: 0;
 }
 
-/* ---- HERO CONTENT ---- */
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.hero-name {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.first-name {
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: 6px;
-  color: #cccccc;
-}
-
-.last-name {
-  font-size: 58px;
-  font-weight: 800;
-  letter-spacing: 4px;
-  color: white;
-}
-
-.hero-bio {
-  font-size: 14px;
-  color: #aaaaaa;
-  line-height: 1.7;
-  max-width: 380px;
-  margin: 0;
-}
-
-.portfolio-btn {
-  width: fit-content;
-  color: white !important;
-  border-color: white !important;
-  padding: 6px 24px;
-}
-
-.portfolio-btn:hover {
-  background-color: white !important;
-  color: #1a1a1a !important;
-}
-
-/* ---- SOCIAL ICONS ---- */
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding-left: 10px;
-}
-
-.social-icons a {
-  color: #aaaaaa;
-  text-decoration: none;
-  font-size: 20px;
-  transition: color 0.2s;
-}
-
-.social-icons a:hover {
-  color: white;
-}
 app-about {
   display: block;
   margin-top: 0;
@@ -158,7 +236,7 @@ app-about {
 @media (max-width: 1024px) {
   .hero-section {
     padding: 10px 24px 40px 24px;
-    gap: 20px;
+    gap: 16px;
   }
 
   .last-name {
@@ -178,13 +256,12 @@ app-about {
 /* Tablet */
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;  /* stack everything vertically */
+    flex-direction: column;
     align-items: center;
     padding: 30px 24px 40px 24px;
     gap: 24px;
   }
 
-  /* hide vertical text on tablet - not enough space */
   .vertical-text-col {
     display: none;
   }
@@ -192,7 +269,7 @@ app-about {
   .hero-content {
     align-items: center;
     text-align: center;
-    order: 2;  /* content goes below the image */
+    order: 2;
   }
 
   .hero-name {
@@ -212,10 +289,14 @@ app-about {
     text-align: center;
   }
 
+  .hero-bottom {
+    max-width: 100%;
+  }
+
   .profile-card {
     width: 220px;
     min-width: 220px;
-    order: 1;  /* image goes on top */
+    order: 1;
   }
 
   .profile-img {
@@ -251,5 +332,9 @@ app-about {
 
   .hero-bio {
     font-size: 13px;
+  }
+
+  .stat-number {
+    font-size: 20px;
   }
 }

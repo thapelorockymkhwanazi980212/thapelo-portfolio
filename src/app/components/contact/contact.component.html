@@ -2,35 +2,13 @@
 
   <!-- Left Column -->
   <div class="left-col">
-<!--    <div class="logo">-->
-<!--      <span class="logo-icon">T</span>-->
-<!--      <span class="logo-text">Thapelo <br> Mkhwanazi</span>-->
-<!--    </div>-->
 
-    <h1 class="heading">I am eager to connect with you and hear your thoughts.</h1>
+    <h1 class="heading">Connect with me.</h1>
 
     <p class="subtext">
-      I welcome you to connect for potential collaborations or just a friendly chat.
-      Let's create something amazing together!
+      Contact for more enquiries and collaboration.
     </p>
 
-    <!-- Angular Material Stroked Button -->
-    <button mat-stroked-button class="talk-btn">Light Up the Talk</button>
-  </div>
-
-  <!-- Middle Column -->
-  <div class="middle-col">
-    <h3>Contact us</h3>
-
-    <p><strong>Email :</strong> thapelorocky98&#64;gmail.com</p>
-    <p><strong>Phone :</strong> +27 72 3129 568</p>
-    <p>
-      <strong>Address :</strong><br>
-      Temba, Hammanskraal<br>
-      0407
-    </p>
-
-<!--   Form -->
     <mat-divider></mat-divider>
 
     <p>Please send us your enquiry.</p>
@@ -76,14 +54,23 @@
 
     </div>
 
-<!--    <div class="social-links">-->
-<!--      @for (link of socialLinks; track link.label) {-->
-<!--      <a [href]="link.url">{{ link.label }}</a>-->
-<!--      @if (!$last) { <span>|</span> }-->
-<!--      }-->
-<!--    </div>-->
+  </div>
+
+
+  <!-- Middle Column -->
+  <div class="middle-col">
+    <h3>Contact us</h3>
+
+    <p><strong>Email :</strong> thapelorocky98&#64;gmail.com</p>
+    <p><strong>Phone :</strong> +27 72 3129 568</p>
+    <p>
+      <strong>Address :</strong><br>
+      Temba, Hammanskraal<br>
+      0407
+    </p>
 
   </div>
+
 
   <!-- Right Column -->
   <div class="right-col">
@@ -91,11 +78,13 @@
     <div class="social-grid">
       @for (social of socialLinks; track social.label) {
       <a [href]="social.url" class="social-card" mat-icon-button>
-        <mat-icon class="social-icon">{{ social.icon }}</mat-icon>
+        <img [src]="social.icon" [alt]="social.label" class="social-icon" />
         <span class="social-label">{{ social.label }}</span>
       </a>
       }
     </div>
   </div>
 
+
 </section>
+
