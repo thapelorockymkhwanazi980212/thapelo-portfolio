@@ -1,11 +1,101 @@
-<h2>Thapelo</h2>
-<a href="https://github.com/thapelorockymkhwanazi980212">
-  <i class="pi pi-linkedin"></i>
-</a>
-<a href="https://www.linkedin.com/in/thapelo-mkhwanazi-aa2473299/">
-  <i class="pi pi-linkedin"></i>
-</a>
+<section class="contact-section">
 
-<a href="mailto:thapelorocky98@gmail.com">
-  <i class="pi  pi-envelope" style="colour: #00A9AC"></i>
-</a>
+  <!-- Left Column -->
+  <div class="left-col">
+<!--    <div class="logo">-->
+<!--      <span class="logo-icon">T</span>-->
+<!--      <span class="logo-text">Thapelo <br> Mkhwanazi</span>-->
+<!--    </div>-->
+
+    <h1 class="heading">I am eager to connect with you and hear your thoughts.</h1>
+
+    <p class="subtext">
+      I welcome you to connect for potential collaborations or just a friendly chat.
+      Let's create something amazing together!
+    </p>
+
+    <!-- Angular Material Stroked Button -->
+    <button mat-stroked-button class="talk-btn">Light Up the Talk</button>
+  </div>
+
+  <!-- Middle Column -->
+  <div class="middle-col">
+    <h3>Contact us</h3>
+
+    <p><strong>Email :</strong> thapelorocky98&#64;gmail.com</p>
+    <p><strong>Phone :</strong> +27 72 3129 568</p>
+    <p>
+      <strong>Address :</strong><br>
+      Temba, Hammanskraal<br>
+      0407
+    </p>
+
+<!--   Form -->
+    <mat-divider></mat-divider>
+
+    <p>Please send us your enquiry.</p>
+
+    <div class="enquiry-form">
+
+      <!-- Name and Surname side by side -->
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="enquiry.name" placeholder="Your name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Surname</mat-label>
+          <input matInput [(ngModel)]="enquiry.surname" placeholder="Your surname" />
+        </mat-form-field>
+      </div>
+
+      <!-- Email and Phone side by side -->
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="enquiry.email" placeholder="Your email" type="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Phone</mat-label>
+          <input matInput [(ngModel)]="enquiry.phone" placeholder="Your phone number" type="tel" />
+        </mat-form-field>
+      </div>
+
+      <!-- Enquiry message full width -->
+      <mat-form-field appearance="outline" class="form-field full-width">
+        <mat-label>Enquiry</mat-label>
+        <textarea matInput [(ngModel)]="enquiry.message" placeholder="Write your message here..." rows="4"></textarea>
+      </mat-form-field>
+
+      <!-- Submit button -->
+      <button mat-stroked-button class="submit-btn" (click)="submitEnquiry()">
+        Send Enquiry
+      </button>
+
+    </div>
+
+<!--    <div class="social-links">-->
+<!--      @for (link of socialLinks; track link.label) {-->
+<!--      <a [href]="link.url">{{ link.label }}</a>-->
+<!--      @if (!$last) { <span>|</span> }-->
+<!--      }-->
+<!--    </div>-->
+
+  </div>
+
+  <!-- Right Column -->
+  <div class="right-col">
+    <h3>Social Media</h3>
+    <div class="social-grid">
+      @for (social of socialLinks; track social.label) {
+      <a [href]="social.url" class="social-card" mat-icon-button>
+        <mat-icon class="social-icon">{{ social.icon }}</mat-icon>
+        <span class="social-label">{{ social.label }}</span>
+      </a>
+      }
+    </div>
+  </div>
+
+</section>

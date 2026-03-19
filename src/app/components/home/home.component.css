@@ -1,26 +1,255 @@
 .hero-section {
-  background: linear-gradient(to right, #292A2D);
+  display: flex;
+  align-items: flex-start;
+  background-color: #1a1a1a;
   color: white;
-  padding: 80px 40px;
+  padding: 10px 40px 40px 40px;
+  gap: 350px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
+/* ---- VERTICAL TEXT ---- */
+.vertical-text-col {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
+  min-width: 40px;
 }
 
-.hero-text {
-  max-width: 500px;
+.vertical-full-stack {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 13px;
+  color: #aaaaaa;
+  letter-spacing: 2px;
 }
 
-.hero-buttons {
+.vertical-developer {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 60px;
+  background-color: #555555;
+}
+
+/* ---- PROFILE CARD ---- */
+.profile-card {
+  position: relative;
+  width: 280px;
+  min-width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #333333;
+}
+
+.profile-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  padding: 20px 16px 16px;
+}
+
+.quote {
+  font-size: 13px;
+  font-style: italic;
+  color: #dddddd;
+  margin: 0;
+}
+
+/* ---- HERO CONTENT ---- */
+.hero-content {
+  flex: 1;
   display: flex;
-  gap: 16px;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.hero-image img {
-  width: 320px;
-  border-radius: 10px;
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.first-name {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: #cccccc;
+}
+
+.last-name {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: white;
+}
+
+.hero-bio {
+  font-size: 14px;
+  color: #aaaaaa;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0;
+}
+
+.portfolio-btn {
+  width: fit-content;
+  color: white !important;
+  border-color: white !important;
+  padding: 6px 24px;
+}
+
+.portfolio-btn:hover {
+  background-color: white !important;
+  color: #1a1a1a !important;
+}
+
+/* ---- SOCIAL ICONS ---- */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-left: 10px;
+}
+
+.social-icons a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+app-about {
+  display: block;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ==============================
+   RESPONSIVE STYLES
+============================== */
+
+/* Small monitor / laptop */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 10px 24px 40px 24px;
+    gap: 20px;
+  }
+
+  .last-name {
+    font-size: 46px;
+  }
+
+  .profile-card {
+    width: 240px;
+    min-width: 240px;
+  }
+
+  .profile-img {
+    height: 360px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;  /* stack everything vertically */
+    align-items: center;
+    padding: 30px 24px 40px 24px;
+    gap: 24px;
+  }
+
+  /* hide vertical text on tablet - not enough space */
+  .vertical-text-col {
+    display: none;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    order: 2;  /* content goes below the image */
+  }
+
+  .hero-name {
+    align-items: center;
+  }
+
+  .last-name {
+    font-size: 42px;
+  }
+
+  .first-name {
+    font-size: 18px;
+  }
+
+  .hero-bio {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .profile-card {
+    width: 220px;
+    min-width: 220px;
+    order: 1;  /* image goes on top */
+  }
+
+  .profile-img {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px 16px 40px 16px;
+    gap: 20px;
+  }
+
+  .last-name {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .first-name {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .profile-card {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .profile-img {
+    height: 260px;
+  }
+
+  .hero-bio {
+    font-size: 13px;
+  }
 }

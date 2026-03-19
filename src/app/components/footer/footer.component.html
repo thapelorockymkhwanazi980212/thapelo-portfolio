@@ -1,3 +1,36 @@
-<mat-toolbar color="primary" style="justify-content:center;">
-  © 2026 Thapelo Mkhwanazi
-</mat-toolbar>
+<footer class="footer">
+
+  <!-- Top Row -->
+  <div class="footer-top">
+
+    <!-- Left - Name and tagline -->
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-icon">T</span>
+        <span class="logo-text">Thapelo <br> Mkhwanazi</span>
+      </div>
+      <p class="tagline">Building clean & meaningful web experiences.</p>
+    </div>
+
+    <!-- Right - Nav Links -->
+    <div class="footer-nav">
+      <h4>Quick Links</h4>
+      @for (link of navLinks; track link.label) {
+      <a [routerLink]="link.path" mat-button class="footer-link">
+        {{ link.label }}
+      </a>
+      }
+    </div>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="footer-divider"></div>
+
+  <!-- Bottom - Copyright -->
+  <div class="footer-bottom">
+    <p>© {{ currentYear }} Thapelo Mkhwanazi. All rights reserved.</p>
+    <p>Built with Angular & ❤️</p>
+  </div>
+
+</footer>

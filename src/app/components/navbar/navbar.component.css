@@ -1,25 +1,162 @@
+.navbar {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ---- LOGO ---- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 22px;
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 4px 10px;
+}
+
+.logo-text {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: white;
+}
+
 .spacer {
-  flex: 1 1 auto;
+  flex: 1;
 }
 
+/* ---- DESKTOP NAV ---- */
 .nav-links a {
-  margin-left: 10px;
+  color: #cccccc;
+  font-size: 14px;
+  text-decoration: none;
 }
 
+.nav-links a:hover {
+  color: white;
+}
+
+/* ---- CTA BUTTON ---- */
+.talk-btn {
+  color: white !important;
+  border-color: white !important;
+  margin-left: 16px;
+  font-size: 13px;
+}
+
+.talk-btn:hover {
+  background-color: white !important;
+  color: #1a1a1a !important;
+}
+
+/* ---- HAMBURGER - hidden on desktop ---- */
+.hamburger-btn {
+  display: none;
+  color: white;
+  margin-right: 8px;
+}
+
+/* ---- MOBILE MENU ---- */
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.mobile-menu.open {
+  max-height: 400px;
+  padding: 16px 0;
+}
+
+.mobile-link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #2a2a2a;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.mobile-link:hover {
+  color: white;
+  background-color: #2a2a2a;
+}
+
+.mobile-cta {
+  color: white !important;
+  border: 1px solid white;
+  margin: 16px 24px 0 24px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 24px;
+}
+
+/* ---- OVERLAY ---- */
+.overlay {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .talk-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-
   .nav-links {
     display: none;
   }
 
-  .mobile-menu {
-    display: block;
+  .hamburger-btn {
+    display: flex;
   }
 
+  .mobile-menu {
+    display: flex;
+  }
 }
-.spacer { flex: 1 1 auto; }
-a { color: white; text-decoration: none; }
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .logo-icon {
+    font-size: 18px;
+    padding: 3px 8px;
+  }
+
+  .logo-text {
+    font-size: 10px;
+  }
+}

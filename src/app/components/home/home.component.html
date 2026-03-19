@@ -1,28 +1,51 @@
 <section class="hero-section">
 
-  <div class="hero-content">
-
-    <!-- LEFT SIDE -->
-    <div class="hero-text">
-      <h1>Hi, I'm Thapelo</h1>
-      <p>I build web applications and help businesses grow online.</p>
-
-      <div class="hero-buttons">
-        <button mat-raised-button style="background-color:#212C54" routerLink="/resume">
-          View Resume
-        </button>
-
-        <button mat-raised-button color="accent" routerLink="/contact">
-          Need a Project?
-        </button>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-    <div class="hero-image">
-      <img src="assets/thapelo.jpg" alt="Thapelo">
-    </div>
-
+  <!-- Left vertical text -->
+  <div class="vertical-text-col">
+    <span class="vertical-full-stack">Developer</span>
+    <div class="vertical-line"></div>
+    <span class="vertical-developer">FULL-STACK</span>
   </div>
 
+  <!-- Left content (MOVED HERE) -->
+  <div class="hero-content">
+    <div class="hero-name">
+      <span class="first-name">Mkhwanazi</span>
+      <span class="last-name">Thapelo</span>
+    </div>
+    <p class="hero-bio">
+      My goal is to write clean, maintainable code that enhances
+      the development process and makes coding enjoyable through
+      structured and thoughtful practices.
+    </p>
+    <button mat-stroked-button class="portfolio-btn">Portfolio</button>
+  </div>
+
+  <!-- Right profile card (MOVED HERE) -->
+  <div class="profile-card">
+    <img src="assets/thapelo.jpg" alt="Thapelo" class="profile-img" />
+    <div class="card-overlay">
+      <p class="quote">"I build clean, scalable web applications."</p>
+    </div>
+  </div>
+
+<!--  &lt;!&ndash; Far right social icons &ndash;&gt;-->
+<!--  <div class="social-icons">-->
+<!--    <a href="#" mat-icon-button>-->
+<!--      <mat-icon svgIcon="github" class="social-icon"></mat-icon>-->
+<!--    </a>-->
+<!--    <a href="https://linkedin.com" mat-icon-button>-->
+<!--      <mat-icon>linked_in</mat-icon>-->
+<!--    </a>-->
+<!--    <a href="#" mat-icon-button>-->
+<!--      <mat-icon>dribbble</mat-icon>-->
+<!--    </a>-->
+<!--    <a href="#" mat-icon-button>-->
+<!--      <mat-icon>behance</mat-icon>-->
+<!--    </a>-->
+<!--  </div>-->
+
 </section>
+<app-about></app-about>
+<app-contact></app-contact>
+
