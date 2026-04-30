@@ -1,100 +1,155 @@
 <section class="contact-section">
 
-  <!-- Left Column -->
-  <div class="left-col">
-
-    <h1 class="heading">Connect with me.</h1>
-
-    <p class="subtext">
-      Contact for more enquiries and collaboration.
+  <!-- Header -->
+  <div class="contact-header">
+    <span class="contact-tag">Get in touch</span>
+    <h1 class="contact-heading">Let's connect</h1>
+    <p class="contact-subtitle">
+      Open to collaborations, freelance work, and new opportunities.
+      Reach out and I'll get back to you.
     </p>
+  </div>
 
-    <mat-divider></mat-divider>
+  <!-- Two-column grid -->
+  <div class="contact-grid">
 
-    <p>Please send us your enquiry.</p>
+    <!-- LEFT: Enquiry Form -->
+    <div class="form-panel">
 
-    <div class="enquiry-form">
-
-      <!-- Name and Surname side by side -->
       <div class="form-row">
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="enquiry.name" placeholder="Your name" />
-        </mat-form-field>
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input
+            id="name"
+            type="text"
+            [(ngModel)]="enquiry.name"
+            placeholder="Thapelo"
+            (keypress)="onNameKeypress($event)"
+            [class.input-error]="submitted && fieldErrors.name"
+          />
+          @if (submitted && fieldErrors.name) {
+          <span class="field-error">{{ fieldErrors.name }}</span>
+          }
+        </div>
 
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Surname</mat-label>
-          <input matInput [(ngModel)]="enquiry.surname" placeholder="Your surname" />
-        </mat-form-field>
+        <div class="form-group">
+          <label for="surname">Surname <span class="required">*</span></label>
+          <input
+            id="surname"
+            type="text"
+            [(ngModel)]="enquiry.surname"
+            placeholder="Rocky"
+            (keypress)="onNameKeypress($event)"
+            [class.input-error]="submitted && fieldErrors.surname"
+          />
+          @if (submitted && fieldErrors.surname) {
+          <span class="field-error">{{ fieldErrors.surname }}</span>
+          }
+        </div>
       </div>
 
-      <!-- Email and Phone side by side -->
       <div class="form-row">
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Email</mat-label>
-          <input matInput [(ngModel)]="enquiry.email" placeholder="Your email" type="email" />
-        </mat-form-field>
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input
+            id="email"
+            type="email"
+            [(ngModel)]="enquiry.email"
+            placeholder="you@example.com"
+            [class.input-error]="submitted && fieldErrors.email"
+          />
+          @if (submitted && fieldErrors.email) {
+          <span class="field-error">{{ fieldErrors.email }}</span>
+          }
+        </div>
 
-        <mat-form-field appearance="outline" class="form-field">
-          <mat-label>Phone</mat-label>
-          <input matInput [(ngModel)]="enquiry.phone" placeholder="Your phone number" type="tel" />
-        </mat-form-field>
+        <div class="form-group">
+          <label for="phone">Phone <span class="optional">(optional)</span></label>
+          <input
+            id="phone"
+            type="tel"
+            [(ngModel)]="enquiry.phone"
+            placeholder="+27 67 836 2822"
+            (keypress)="onPhoneKeypress($event)"
+            [class.input-error]="submitted && fieldErrors.phone"
+          />
+          @if (submitted && fieldErrors.phone) {
+          <span class="field-error">{{ fieldErrors.phone }}</span>
+          }
+        </div>
       </div>
 
-      <!-- Enquiry message full width -->
-      <mat-form-field appearance="outline" class="form-field full-width">
-        <mat-label>Enquiry</mat-label>
-        <textarea matInput [(ngModel)]="enquiry.message" placeholder="Write your message here..." rows="4"></textarea>
-      </mat-form-field>
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea
+          id="message"
+          [(ngModel)]="enquiry.message"
+          placeholder="Tell me about your project or enquiry..."
+          rows="5"
+          [class.input-error]="submitted && fieldErrors.message"
+        ></textarea>
+        @if (submitted && fieldErrors.message) {
+        <span class="field-error">{{ fieldErrors.message }}</span>
+        }
+      </div>
 
-    <!--  Success Message-->
-      @if(successMessage){
-        <p class="success-msg">{{ successMessage }}</p>
+      @if (successMessage) {
+      <p class="success-msg">{{ successMessage }}</p>
       }
-
-      <!-- Error Message -->
       @if (errorMessage) {
-      <p class="error-msg"> {{ errorMessage }}</p>
+      <p class="error-msg">{{ errorMessage }}</p>
       }
 
-      <!-- Submit button -->
-      <button mat-stroked-button class="submit-btn" (click)="submitEnquiry()" [disabled]="isLoading">
-        {{ isLoading ? 'Sending...' : 'Send Enquiry' }}
+      <button class="send-btn" (click)="submitEnquiry()" [disabled]="isLoading">
+        {{ isLoading ? 'Sending...' : 'Send message' }}
       </button>
 
     </div>
 
-  </div>
+    <!-- RIGHT: Info + Socials -->
+    <div class="info-panel">
 
+      <div class="info-block">
+        <h3 class="info-heading">Contact details</h3>
+        <div class="info-divider"></div>
 
-  <!-- Middle Column -->
-  <div class="middle-col">
-    <h3>Contact us</h3>
+        <div class="info-item">
+          <span class="info-label">Email</span>
+          <span class="info-value">thapelorocky98&#64;gmail.com</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Phone</span>
+          <span class="info-value">+27 67 836 2822 / +27 72 3129 568</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Location</span>
+          <span class="info-value">Johannesburg, Gauteng, South Africa</span>
+        </div>
+      </div>
 
-    <p><strong>Email :</strong> thapelorocky98&#64;gmail.com</p>
-    <p><strong>Phone :</strong> +27 67 836 2822</p>
-    <p>
-      <strong>Address :</strong><br>
-      Temba, Hammanskraal<br>
-      0407
-    </p>
+      <div class="info-block">
+        <h3 class="info-heading">Social Media</h3>
+        <div class="info-divider"></div>
 
-  </div>
+        <div class="social-list">
+          @for (social of socialLinks; track social.label) {
+          <a [href]="social.url" class="social-link" target="_blank" rel="noopener noreferrer">
+            <div class="social-icon-wrap">
+              <img [src]="social.icon" [alt]="social.label" class="social-icon" />
+            </div>
+            <span class="social-name">{{ social.label }}</span>
+            <span class="social-arrow">→</span>
+          </a>
+          }
+        </div>
+      </div>
 
-
-  <!-- Right Column -->
-  <div class="right-col">
-    <h3>Social Media</h3>
-    <div class="social-grid">
-      @for (social of socialLinks; track social.label) {
-      <a [href]="social.url" class="social-card" mat-icon-button>
-        <img [src]="social.icon" [alt]="social.label" class="social-icon" />
-        <span class="social-label">{{ social.label }}</span>
-      </a>
-      }
     </div>
   </div>
 
+  <!-- Footer -->
+  <div class="contact-footer">
+    <div class="footer-divider"></div>
+  </div>
 
 </section>
-
