@@ -38,7 +38,7 @@
             id="surname"
             type="text"
             [(ngModel)]="enquiry.surname"
-            placeholder="Rocky"
+            placeholder="Mkhwanazi"
             (keypress)="onNameKeypress($event)"
             [class.input-error]="submitted && fieldErrors.surname"
           />
@@ -69,7 +69,7 @@
             id="phone"
             type="tel"
             [(ngModel)]="enquiry.phone"
-            placeholder="+27 67 836 2822"
+            placeholder="0712345678"
             (keypress)="onPhoneKeypress($event)"
             [class.input-error]="submitted && fieldErrors.phone"
           />
@@ -84,7 +84,7 @@
         <textarea
           id="message"
           [(ngModel)]="enquiry.message"
-          placeholder="Tell me about your project or enquiry..."
+          placeholder="Send me an enquiry..."
           rows="5"
           [class.input-error]="submitted && fieldErrors.message"
         ></textarea>
